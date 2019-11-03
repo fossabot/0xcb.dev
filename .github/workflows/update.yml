@@ -1,0 +1,32 @@
+name: Update blog
+
+on: [push, repository_dispatch]
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Set Node.js
+        uses: actions/setup-node@master
+        with:
+          node-version: 10.x
+
+      - name: Install dependencies
+        run: yarn install --prod --pure-lockfile
+
+      - name: Lint
+        run: yarn run lint
+
+      - name: Build
+        run: yarn run build
+        env:
+          GHOST_API_URL: "https://blog.conor-burns.com"
+          GHOST_CONTENT_API_KEY: ${{ secrets.ghost_content_api_key }}
+          GATSBY_ENV: "prod"
+
+      - name: Deploy
+        run: docker-compose run deploy
+        env:
+          DEPLOY_KEY: ${{ secrets.deploy_key }}
