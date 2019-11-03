@@ -9,4 +9,4 @@ services:
     working_dir: /home/site
     environment:
       deploy_key: $DEPLOY_KEY
-    command: sh scripts/deploy.sh
+    command: sh deploy.sh
