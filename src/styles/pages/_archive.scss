@@ -1,0 +1,45 @@
+@import '../variables';
+@import '../mixins';
+
+.archive {
+  @extend .container;
+
+  display: grid;
+  margin: 50px auto !important;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+
+  @include smallerThan(md) {
+    grid-template-columns: 1fr;
+  }
+
+  .post-card {
+    margin-top: 0;
+    z-index: 1;
+  }
+}
+
+.tag-archive {
+  @extend .container;
+
+  margin: 50px auto !important;
+
+  &__posts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+
+    @include smallerThan(md) {
+      grid-template-columns: 2fr;
+    }
+
+    @include smallerThan(sm) {
+      grid-template-columns: 1fr;
+    }
+
+    .post-card {
+      margin-top: 0;
+      z-index: 1;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@import '../variables';
+
+.reading-progress {
+  height: 5px;
+  background-color: $primary-color;
+  position: sticky;
+  top: 70px;
+  z-index: map_get($z-indexes, 'reading-progress');
+  width: 55%;
+
+  @each $tag, $properties in $tag-colors {
+    &--tag-#{$tag} {
+      color: map-get($properties, 'color');
+      background-color: map-get($properties, 'background-color');
+    }
+  }
+}

@@ -1,0 +1,40 @@
+@import '../variables';
+@import '../mixins';
+
+.error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: calc(100vh - 110px);
+
+  @include smallerThan(lg) {
+    flex-direction: column-reverse;
+  }
+
+  &__image {
+    height: 137px;
+    margin-right: 40px;
+
+    @include smallerThan(lg) {
+      margin: 50px auto;
+    }
+  }
+
+  &__content {
+    @include smallerThan(lg) {
+      text-align: center;
+    }
+  }
+
+  &__title {
+    margin: 0 0 15px;
+
+    small {
+      display: block;
+      font-size: .5em;
+      color: $gray-500;
+    }
+  }
+}

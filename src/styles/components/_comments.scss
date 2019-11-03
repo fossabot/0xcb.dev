@@ -1,0 +1,14 @@
+@import '../variables';
+@import '../mixins';
+
+.comments {
+  @extend .container;
+  display: grid;
+  grid-template-columns: .25fr minmax(0, 1fr) .25fr;
+  grid-column-gap: 30px;
+  margin: 50px auto !important;
+
+  @include smallerThan(md) {
+    grid-template-columns: 1fr;
+  }
+}

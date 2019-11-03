@@ -1,0 +1,19 @@
+@import '../variables';
+
+.footer {
+  max-width: 100%;
+  margin: 10px 0;
+
+  &__content {
+    @extend .container;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 15px 0;
+    font-size: .8em;
+  }
+
+  &__copyright {
+    text-align: right;
+  }
+}

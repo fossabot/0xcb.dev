@@ -1,0 +1,158 @@
+@import 'variables';
+@import 'mixins';
+
+body {
+  background-color: $background-color;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  margin: auto;
+  width: $container-width;
+  padding: 0 20px;
+  box-sizing: border-box;
+
+  @include smallerThan(xl) {
+    max-width: 100%;
+  }
+}
+
+.ad {
+  margin-bottom: 20px;
+  max-width: 100%;
+}
+
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+hr {
+  border-top: 1px $border-color solid;
+  border-left: 0;
+  border-bottom: 0;
+  border-right: 0;
+}
+
+.support-modal {
+  background-color: $white;
+  width: 600px;
+  margin: 100px auto;
+  border-radius: 10px;
+  padding: 40px;
+  outline: none;
+  position: relative;
+  max-width: 90%;
+
+  p {
+    margin-top: 0;
+    line-height: 1.6;
+
+    a {
+      color: $primary-color;
+      border-bottom: 2px $primary-color solid;
+    }
+  }
+
+  &__close-button {
+    outline: none;
+    cursor: pointer;
+    background: none;
+    border: 0;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+
+  &__options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 30px;
+    grid-auto-rows: 1fr;
+    margin-bottom: 15px;
+
+    @include smallerThan(sm) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__channel {
+    background-color: $gray-50;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    transition: all .5s;
+    font-size: .9em;
+
+    @include smallerThan(sm) {
+      margin-bottom: 10px;
+    }
+
+    svg {
+      opacity: .5;
+      display: block;
+      margin: 0 auto 10px;
+      width: 30px;
+      height: auto;
+      transition: all .5s;
+    }
+
+    &:hover {
+      background-color: $gray-100;
+
+      svg {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__thanks {
+    padding: 20px 0 0;
+    text-align: center;
+    font-style: italic;
+    color: $gray-400;
+  }
+}
+
+.ReactModal {
+  &__Overlay {
+    background-color: rgba(0, 0, 0, .5) !important;
+    z-index: map_get($z-indexes, 'search');
+    opacity: 0;
+    transition: opacity .25s ease-in-out;
+
+    &--after-open {
+      opacity: 1;
+    }
+
+    &--before-close {
+      opacity: 0;
+    }
+  }
+
+  &__Body {
+    &--open {
+      overflow: hidden;
+    }
+  }
+}

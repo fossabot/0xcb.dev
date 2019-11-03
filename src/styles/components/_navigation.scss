@@ -1,0 +1,88 @@
+@import '../variables';
+@import '../mixins';
+
+.navigation {
+  display: flex;
+  padding: 20px 20px;
+  max-height: 70px;
+  height: 70px;
+  margin: auto;
+  width: $container-width;
+  z-index: map_get($z-indexes, 'navigation');
+  position: relative;
+  box-sizing: border-box;
+  max-width: 100%;
+
+  &__logo {
+    max-height: 35px;
+    margin-right: 40px;
+
+    @include smallerThan(sm) {
+      margin-right: 20px;
+    }
+  }
+
+  &__mobile {
+    @include smallerThan(sm) {
+      width: 100%;
+      overflow-x: auto;
+      overflow-y: hidden;
+      //mask-image: linear-gradient(to right, transparent, $black 25px, $black 90%, transparent);
+    }
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    white-space: nowrap;
+  }
+
+  &__items {
+    align-self: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__right {
+    align-self: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    display: inline-block;
+  }
+
+  &__item-link {
+    background-color: transparent;
+    border: 0;
+    color: $white;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    opacity: .7;
+    transition: opacity .5s;
+    padding: 16px;
+
+    @include smallerThan(sm) {
+      padding: 12px;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__container {
+    z-index: map_get($z-indexes, 'navigation');
+
+    &--dark {
+      top: 0;
+      position: sticky;
+      background-color: $nav-dark-background-color;
+      box-shadow: 0 0 3px rgba(0,0,0,.03), 0 3px 46px rgba(0,0,0,.07);
+    }
+  }
+}

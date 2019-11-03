@@ -1,0 +1,25 @@
+$breakpoints: (
+  xs: 425px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1300px
+);
+
+@mixin smallerThan($bp) {
+  @media (max-width: map_get($breakpoints, $bp)) {
+    @content;
+  }
+}
+
+@mixin between($bp1, $bp2) {
+  @media (min-width: map_get($breakpoints, $bp1)) and (max-width: map_get($breakpoints, $bp2)) {
+    @content;
+  }
+}
+
+@mixin greaterThan($bp) {
+  @media (min-width: map_get($breakpoints, $bp)) {
+    @content;
+  }
+}

@@ -1,0 +1,65 @@
+@import '../variables';
+
+.subheader {
+  background-color: $primary-color;
+  display: flex;
+  font-size: 1.15em;
+  height: 90px;
+
+  &__content {
+    @extend .container;
+
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+  }
+
+  &__addition {
+    align-self: center;
+
+    a {
+      color: $white;
+      opacity: .5;
+      font-size: .8em;
+      transition: opacity .5s;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__tag-link {
+    color: $white;
+    text-decoration: none;
+    opacity: .85;
+    font-weight: normal;
+  }
+
+  &__title {
+    font-size: 1em;
+    font-weight: bold;
+    color: $white;
+
+    small {
+      color: rgba($white, .8);
+    }
+  }
+
+  &__description {
+    display: block;
+    font-weight: normal;
+  }
+
+  &--dark {
+    color: $gray-50;
+    background-color: $gray-950;
+  }
+
+  @each $tag, $properties in $tag-colors {
+    &--tag-#{$tag} {
+      color: map-get($properties, 'color');
+      background-color: map-get($properties, 'background-color');
+    }
+  }
+}

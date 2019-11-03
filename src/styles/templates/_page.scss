@@ -1,0 +1,42 @@
+@import '../variables';
+@import '../mixins';
+
+.page {
+  @extend .container;
+
+  display: flex;
+
+  @include smallerThan(md) {
+    flex-wrap: wrap;
+  }
+
+  &__content {
+    @extend .post__html;
+
+    p:first-child {
+      margin-top: 0;
+    }
+
+    padding-left: 0;
+    padding-top: 40px;
+  }
+
+  &__sidebar {
+    min-width: 330px !important;
+    max-width: 330px !important;
+    padding-top: 40px;
+
+    @include smallerThan(md) {
+      margin: auto;
+    }
+  }
+
+  &__sidebar-title {
+    text-align: center;
+    margin: 20px;
+  }
+
+  .post-card__feature-image {
+    width: auto;
+  }
+}

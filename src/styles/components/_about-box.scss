@@ -1,0 +1,45 @@
+@import '../variables';
+@import '../mixins';
+
+.about-box {
+  border: 2px $border-color solid;
+  background-color: $white;
+  border-radius: 10px;
+  padding: 40px;
+  position: relative;
+  width: 100%;
+
+  &__avatar {
+    border: 2px $border-color solid;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 1);
+    position: absolute;
+    left: -40px;
+    top: -40px;
+    border-radius: 100%;
+    max-width: 80px;
+    max-height: 80px;
+
+    @include smallerThan(md) {
+      left: calc(50% - 40px);
+    }
+  }
+
+  &__author-name {
+    margin: 20px 0;
+
+    @include smallerThan(md) {
+      text-align: center;
+    }
+  }
+
+  &__social-icons-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__social-icons {
+    width: 50%;
+    margin: 20px 0 0 0 !important;
+  }
+}

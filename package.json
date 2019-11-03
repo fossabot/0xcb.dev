@@ -1,0 +1,88 @@
+{
+  "name": "gatsby-starter-default",
+  "private": true,
+  "description": "Theme of blog.conor-burns.com",
+  "version": "1.0.0",
+  "author": {
+    "name": "Conor Burns",
+    "email": "mail@conor-burns.com",
+    "url": "https://conor-burns.com"
+  },
+  "dependencies": {
+    "@andrew-codes/gatsby-plugin-elasticlunr-search": "^1.0.4",
+    "@babel/core": "^7.5.5",
+    "@types/prismjs": "^1.16.0",
+    "@types/react-helmet": "^5.0.8",
+    "babel-plugin-prismjs": "^1.0.2",
+    "cheerio": "^1.0.0-rc.3",
+    "disqus-react": "^1.0.5",
+    "gatsby": "^2.3.3",
+    "gatsby-cli": "^2.7.28",
+    "gatsby-image": "^2.0.35",
+    "gatsby-plugin-advanced-sitemap": "^1.0.6",
+    "gatsby-plugin-algolia": "^0.3.0",
+    "gatsby-plugin-brotli": "^1.2.3",
+    "gatsby-plugin-feed": "^2.2.3",
+    "gatsby-plugin-google-analytics": "^2.0.21",
+    "gatsby-plugin-lunr": "^1.5.0",
+    "gatsby-plugin-manifest": "^2.0.25",
+    "gatsby-plugin-offline": "^2.1.1",
+    "gatsby-plugin-react-helmet": "^3.0.11",
+    "gatsby-plugin-sass": "^2.0.11",
+    "gatsby-plugin-sharp": "^2.0.32",
+    "gatsby-plugin-twitter": "^2.0.13",
+    "gatsby-plugin-typescript": "^2.0.11",
+    "gatsby-remark-prismjs": "^3.2.7",
+    "gatsby-source-filesystem": "^2.0.28",
+    "gatsby-source-ghost": "^3.3.0",
+    "gatsby-transformer-remark": "^2.3.8",
+    "gatsby-transformer-sharp": "^2.1.17",
+    "gh-pages": "^2.0.1",
+    "node-sass": "^4.11.0",
+    "normalize.css": "^8.0.1",
+    "prismjs": "^1.16.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.0",
+    "react-icons": "^3.6.1",
+    "react-image-gallery": "^0.8.16",
+    "react-modal": "^3.8.1",
+    "react-typed": "^1.1.2",
+    "smooth-scroll": "^16.0.3",
+    "to": "^0.2.9",
+    "tocbot": "^4.5.1",
+    "tslint": "^5.17.0",
+    "tslint-react": "^4.0.0",
+    "typed.js": "^2.0.10",
+    "update": "^0.7.4",
+    "webpack": "^4.39.1"
+  },
+  "devDependencies": {
+    "babel-preset-gatsby": "^0.2.5",
+    "prettier": "^1.16.4",
+    "typescript": "^3.4.1"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write src/**/*.{js,jsx}",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "type-check": "tsc",
+    "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
+    "deploy": "gatsby build --prefix-paths && bread-compressor public && gh-pages -d public -b master"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.conor-burns.com/Conor-Burns/blog.conor-burns.com"
+  },
+  "bugs": {
+    "url": "https://git.conor-burns.com/Conor-Burns/blog.conor-burns.com/issues"
+  }
+}
