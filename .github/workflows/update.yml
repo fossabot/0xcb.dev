@@ -27,3 +27,4 @@ jobs:
         run: docker-compose run deploy
         env:
           DEPLOY_KEY: ${{ secrets.deploy_key }}
+
