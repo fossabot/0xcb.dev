@@ -76,13 +76,13 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
     "type-check": "tsc",
     "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
-    "deploy": "gatsby build --prefix-paths && bread-compressor public && gh-pages -d public -b master"
+    "deploy": "gatsby build && bread-compressor public"
   },
   "repository": {
     "type": "git",
-    "url": "https://git.conor-burns.com/Conor-Burns/blog.conor-burns.com"
+    "url": "https://github.com/Conor-Burns/blog.conor-burns.com"
   },
   "bugs": {
-    "url": "https://git.conor-burns.com/Conor-Burns/blog.conor-burns.com/issues"
+    "url": "https://github.com/Conor-Burns/blog.conor-burns.com/issues"
   }
 }

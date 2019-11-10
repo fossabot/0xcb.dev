@@ -16,8 +16,11 @@ jobs:
       - name: Install dependencies
         run: yarn install --prod --pure-lockfile
 
-      - name: Build
-        run: yarn run build
+      - name: Install Compressor
+        run: yarn install bread-compressor-cli -D
+
+      - name: Build and Compress
+        run: yarn run deploy
         env:
           GHOST_API_URL: "https://blog.conor-burns.com"
           GHOST_CONTENT_API_KEY: ${{ secrets.ghost_content_api_key }}
