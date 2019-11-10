@@ -16,9 +16,6 @@ jobs:
       - name: Install dependencies
         run: yarn install --prod --pure-lockfile
 
-      - name: Install Compressor
-        run: yarn install bread-compressor-cli -D
-
       - name: Build and Compress
         run: yarn run deploy
         env:
