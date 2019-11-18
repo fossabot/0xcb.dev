@@ -16,7 +16,7 @@
     "babel-plugin-prismjs": "^1.0.2",
     "cheerio": "^1.0.0-rc.3",
     "disqus-react": "^1.0.5",
-    "gatsby": "^2.17.13",
+    "gatsby": "^2.17.15",
     "gatsby-cli": "^2.8.10",
     "gatsby-image": "^2.2.32",
     "gatsby-plugin-advanced-sitemap": "^1.0.6",
