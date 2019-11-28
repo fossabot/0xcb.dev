@@ -17,7 +17,7 @@ const DisqusComments: FunctionComponent<DisqusCommentsProps> = ({identifier, tit
   const disqusConfig = {
     identifier: `ghost-${identifier}`,
     title,
-    url: `https://blog.conor.burns.com/${slug}/`,
+
   };
 
   return (
