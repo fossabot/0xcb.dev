@@ -6844,10 +6844,10 @@ gatsby-cli@^1.1.58:
     yargs "^11.1.0"
     yurnalist "^0.2.1"
 
-gatsby-cli@^2.8.14, gatsby-cli@^2.8.15:
-  version "2.8.15"
-  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.8.15.tgz#d6445b9d1543003f1ae7199164a1de2519be10f3"
-  integrity sha512-dBts5O84j7XaCRiiZKFlDQuRm44eQyv1KrzWs/a4un52n9BVzC4FkRu/nafTkI8pNObFKC20VfoK3sHKHst2Rg==
+gatsby-cli@^2.8.15, gatsby-cli@^2.8.16:
+  version "2.8.16"
+  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.8.16.tgz#caf67cdc9c93f98331abba2d9367c3141433257d"
+  integrity sha512-hjsK+xu00gg61CuS6z9jJrV6bHmI58YG3nd8B+goibM3vt/Wajg60til3hxaS9EGwHND+SatQUBTjTxdyOhplw==
   dependencies:
     "@babel/code-frame" "^7.5.5"
     "@babel/runtime" "^7.7.4"
@@ -6865,7 +6865,7 @@ gatsby-cli@^2.8.14, gatsby-cli@^2.8.15:
     fs-exists-cached "^1.0.0"
     fs-extra "^8.1.0"
     gatsby-core-utils "^1.0.22"
-    gatsby-telemetry "^1.1.41"
+    gatsby-telemetry "^1.1.42"
     hosted-git-info "^3.0.2"
     is-valid-path "^0.1.1"
     lodash "^4.17.15"
@@ -7151,10 +7151,10 @@ gatsby-source-ghost@^4.0.3:
     gatsby-node-helpers "^0.3.0"
     qs "6.9.1"
 
-gatsby-telemetry@^1.1.41:
-  version "1.1.41"
-  resolved "https://registry.yarnpkg.com/gatsby-telemetry/-/gatsby-telemetry-1.1.41.tgz#f0b98e4b600514a266a90499fb0dccbb518a57bd"
-  integrity sha512-ObkSd6zvlyxnLuGyB0EhvXcD6rnhpQ+w3Adu3ozSYIsNG1Q/VyXN08AAhsbzEPfEPbz8AlyGsjGLeYbEtC2xXw==
+gatsby-telemetry@^1.1.41, gatsby-telemetry@^1.1.42:
+  version "1.1.42"
+  resolved "https://registry.yarnpkg.com/gatsby-telemetry/-/gatsby-telemetry-1.1.42.tgz#75f0f30b3c22b85e46609843a530425fdfe2c1aa"
+  integrity sha512-N/P8w8sVB1JDWn9Wm3hiB2NOrfIDioccot5h6jX8IVC4aUjXXROZPM+HSy3f1PHg2EoZuCGG5yH50XnayXupLQ==
   dependencies:
     "@babel/code-frame" "^7.5.5"
     "@babel/runtime" "^7.7.4"
