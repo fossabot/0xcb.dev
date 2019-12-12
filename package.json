@@ -59,7 +59,7 @@
     "webpack": "^4.39.1"
   },
   "devDependencies": {
-    "babel-preset-gatsby": "^0.2.25",
+    "babel-preset-gatsby": "^0.2.26",
     "prettier": "^1.19.1",
     "typescript": "^3.7.3"
   },
