@@ -35,7 +35,7 @@
     "gatsby-remark-prismjs": "^3.3.27",
     "gatsby-source-filesystem": "^2.1.42",
     "gatsby-source-ghost": "^4.0.3",
-    "gatsby-transformer-remark": "^2.6.39",
+    "gatsby-transformer-remark": "^2.6.42",
     "gatsby-transformer-sharp": "^2.3.9",
     "gh-pages": "^2.0.1",
     "node-sass": "^4.11.0",
