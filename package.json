@@ -31,7 +31,7 @@
     "gatsby-plugin-sass": "^2.1.26",
     "gatsby-plugin-sharp": "^2.3.7",
     "gatsby-plugin-twitter": "^2.1.17",
-    "gatsby-plugin-typescript": "^2.1.22",
+    "gatsby-plugin-typescript": "^2.1.23",
     "gatsby-remark-prismjs": "^3.3.27",
     "gatsby-source-filesystem": "^2.1.42",
     "gatsby-source-ghost": "^4.0.3",
