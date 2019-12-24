@@ -6975,7 +6975,7 @@ gatsby-cli@^2.8.20, gatsby-cli@^2.8.21:
     ink "^2.6.0"
     ink-spinner "^3.0.1"
 
-gatsby-core-utils@^1.0.24, gatsby-core-utils@^1.0.25:
+gatsby-core-utils@^1.0.25:
   version "1.0.25"
   resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-1.0.25.tgz#8cc8e76a79063c43ac06d9b72100b7c6f1fb5b60"
   integrity sha512-Pz5xueweH9qv5TIW7wwlTxI/CbyzkiE5xvgLicbHbU+InH+lCNt4VuvGP1gQcIRuHMCIbuVKSiVCC7jnxEbtrA==
@@ -13448,10 +13448,10 @@ react-icons@^3.6.1:
   dependencies:
     camelcase "^5.0.0"
 
-react-image-gallery@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/react-image-gallery/-/react-image-gallery-1.0.2.tgz#93ce02a14797819333345a607497a8293ebbd154"
-  integrity sha512-AmwibkI0ihWaksanlRYEqkO3nUdfsxtVqcPvnTBhkOmmm2B9ghD68YP9+nFTz+HIWTm9IRN3urdKLAmY6YDBJQ==
+react-image-gallery@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/react-image-gallery/-/react-image-gallery-1.0.3.tgz#d021ee44d7c2fe7dd20a82180064108d5653529c"
+  integrity sha512-ex/0DcV18lLTCHboKbN1hQ9ptKjY023J0HuWVLeqakxp+oPOfj+qz/y8qVhWIqOGZ2Corql4zkMO7bwT1mO46A==
   dependencies:
     clsx "^1.0.4"
     lodash.debounce "^4.0.8"
