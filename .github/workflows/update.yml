@@ -5,7 +5,7 @@ on: [push, repository_dispatch]
 
 jobs:
   update:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
 
@@ -13,9 +13,6 @@ jobs:
         uses: actions/setup-node@master
         with:
           node-version: 10.x
-
-      - name: upgrade yarn
-        run: npm install yarn -g
 
       - name: Install dependencies
         run: yarn install --prod --pure-lockfile
