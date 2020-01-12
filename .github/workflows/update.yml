@@ -15,7 +15,8 @@ jobs:
 
       - name: Build
         uses: comchangs/action-yarn@master
-        cmd: yarn install --prod --pure-lockfile; yarn add bread-compressor-cli -D; yarn run deploy
+        with:
+          args: yarn install --prod --pure-lockfile; yarn add bread-compressor-cli -D; yarn run deploy
         env:
           GHOST_API_URL: "https://blog.conor-burns.com"
           GHOST_CONTENT_API_KEY: ${{ secrets.ghost_content_api_key }}
