@@ -4,22 +4,18 @@ on: [push, repository_dispatch]
 
 jobs:
   update:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
 
-      - uses: borales/actions-yarn@v2.0.0
+      - name: Set Node.js
+        uses: actions/setup-node@master
         with:
-          cmd: install --prod --pure-lockfile
-      
-      - uses: borales/actions-yarn@v2.0.0
-        with:
-          cmd: add bread-compressor-cli -D
-      
-      - uses: borales/actions-yarn@v2.0.0
-        with:
-          cmd: run deploy
+          node-version: 10.x
 
+      - name: Build
+        uses: comchangs/action-yarn@master
+        run: yarn install --prod --pure-lockfile; yarn add bread-compressor-cli -D; yarn run deploy
         env:
           GHOST_API_URL: "https://blog.conor-burns.com"
           GHOST_CONTENT_API_KEY: ${{ secrets.ghost_content_api_key }}
