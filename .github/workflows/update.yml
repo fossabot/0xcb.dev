@@ -1,10 +1,11 @@
+
 name: Update blog
 
 on: [push, repository_dispatch]
 
 jobs:
   update:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - uses: actions/checkout@v1
 
@@ -13,10 +14,14 @@ jobs:
         with:
           node-version: 10.x
 
-      - name: Build
-        uses: comchangs/action-yarn@master
-        with:
-          args: yarn install --prod --pure-lockfile; yarn add bread-compressor-cli -D; yarn run deploy
+      - name: Install dependencies
+        run: yarn install --prod --pure-lockfile
+
+      - name: Install Compressor
+        run: yarn add bread-compressor-cli -D
+
+      - name: Build and Compress
+        run: yarn run deploy
         env:
           GHOST_API_URL: "https://blog.conor-burns.com"
           GHOST_CONTENT_API_KEY: ${{ secrets.ghost_content_api_key }}
