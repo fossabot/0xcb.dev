@@ -13437,10 +13437,10 @@ react-icons@^3.6.1:
   dependencies:
     camelcase "^5.0.0"
 
-react-image-gallery@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/react-image-gallery/-/react-image-gallery-1.0.3.tgz#d021ee44d7c2fe7dd20a82180064108d5653529c"
-  integrity sha512-ex/0DcV18lLTCHboKbN1hQ9ptKjY023J0HuWVLeqakxp+oPOfj+qz/y8qVhWIqOGZ2Corql4zkMO7bwT1mO46A==
+react-image-gallery@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/react-image-gallery/-/react-image-gallery-1.0.5.tgz#b5fa0e603c5fa4466414afb781570cceba9ed36b"
+  integrity sha512-IdvEF2BAfMJbsR9PIeHY11b+6SaDLWIxDcFwPT1BANcgoSubca2x35gIjkGWMG4P9zYbzUH+JRxCKAOkMt3wKQ==
   dependencies:
     clsx "^1.0.4"
     lodash.debounce "^4.0.8"
