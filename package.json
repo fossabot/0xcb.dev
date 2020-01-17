@@ -61,7 +61,7 @@
   "devDependencies": {
     "babel-preset-gatsby": "^0.2.27",
     "prettier": "^1.19.1",
-    "typescript": "^3.7.4"
+    "typescript": "^3.7.5"
   },
   "keywords": [
     "gatsby"
