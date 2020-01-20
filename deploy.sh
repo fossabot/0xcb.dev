@@ -13,7 +13,7 @@ chmod 600 $HOME/.ssh/deploy_key # SSH keys need to be readonly
 target="/srv/http/conor/cloud/static/blog"
 
 # The actual rsync
-sh -c "rsync -azh -e 'ssh -p 222 -i $HOME/.ssh/deploy_key -o StrictHostKeyChecking=no' public/* --rsync-path='mkdir -p ${target} && rsync' root@conor-burns.com:${target}"
+sh -c "rsync -azzh -e 'ssh -p 222 -i $HOME/.ssh/deploy_key -o StrictHostKeyChecking=no' public/* --rsync-path='mkdir -p ${target} && rsync' root@conor-burns.com:${target}"
 
 # Remove our deploy_key again since it's no longer needed
 rm $HOME/.ssh/deploy_key
