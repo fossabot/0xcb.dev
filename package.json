@@ -53,7 +53,7 @@
     "to": "^0.2.9",
     "tocbot": "^4.10.0",
     "tslint": "^5.17.0",
-    "tslint-react": "^4.0.0",
+    "tslint-react": "^4.2.0",
     "typed.js": "^2.0.10",
     "update": "^0.7.4",
     "webpack": "^4.41.5"
