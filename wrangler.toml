@@ -1,0 +1,12 @@
+name = "blog"
+type = "webpack"
+account_id = "b3f2cee2868202f9cbdadf061b20477b"
+workers_dev = true
+
+[site]
+bucket = "./public"
+entry-point = "workers-site"
+
+[env.production]
+zone_id = "982e2524864f8c2c34a8a28b734188c7"
+route = "0xcb.dev/*"

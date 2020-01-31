@@ -27,6 +27,12 @@ jobs:
           GHOST_CONTENT_API_KEY: ${{ secrets.ghost_content_api_key }}
           GATSBY_ENV: "prod"
 
+      - name: Deploy to CF
+        uses: cloudflare/wrangler-action@1.1.0
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          environment: 'production'
+
       - name: Deploy
         run: docker-compose run deploy
         env:
