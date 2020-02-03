@@ -29,7 +29,7 @@
     "gatsby-plugin-offline": "^3.0.34",
     "gatsby-plugin-react-helmet": "^3.1.21",
     "gatsby-plugin-sass": "^2.1.28",
-    "gatsby-plugin-sharp": "^2.4.4",
+    "gatsby-plugin-sharp": "^2.4.5",
     "gatsby-plugin-twitter": "^2.1.18",
     "gatsby-plugin-typescript": "^2.1.26",
     "gatsby-remark-prismjs": "^3.3.31",
