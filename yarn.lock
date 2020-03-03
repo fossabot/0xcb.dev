@@ -1226,12 +1226,12 @@
   dependencies:
     defer-to-connect "^1.0.1"
 
-"@tryghost/content-api@1.3.4":
-  version "1.3.4"
-  resolved "https://registry.yarnpkg.com/@tryghost/content-api/-/content-api-1.3.4.tgz#d2869656d1a0d9a2ba2423963494547130ca20d2"
-  integrity sha512-r5h0pKX0m17ME0s5W6e3swcDDBn0AkhQKKuMwDOOSzxkUMMWEE6L7fBsIgw/uIR0UjweLiHdYsjxd0Gs9d6Ajw==
+"@tryghost/content-api@1.3.7":
+  version "1.3.7"
+  resolved "https://registry.yarnpkg.com/@tryghost/content-api/-/content-api-1.3.7.tgz#b3f82fad19dc436eea5e62c4a046646f79c307a6"
+  integrity sha512-sT7hHl2W52X7z8wZSPj3xY7mEi9VsbBINDWhD1acyHhrIORIj/imLBL5Bvwxbx5+YRc9bxu10vJy2PI3ZOLBEw==
   dependencies:
-    axios "0.19.0"
+    axios "0.19.1"
     ghost-ignition "^3.0.0"
 
 "@types/color-name@^1.1.1":
@@ -2500,7 +2500,14 @@ aws4@^1.8.0:
   resolved "https://registry.yarnpkg.com/aws4/-/aws4-1.8.0.tgz#f0e003d9ca9e7f59c7a508945d7b2ef9a04a542f"
   integrity sha512-ReZxvNHIOv88FlT7rxcXIIC0fPt4KZqZbOlivyWtXLt8ESx84zd3kMC6iK5jVeS2qt+g7ftS7ye4fi06X5rtRQ==
 
-axios@0.19.0, axios@^0.19.0:
+axios@0.19.1:
+  version "0.19.1"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.19.1.tgz#8a6a04eed23dfe72747e1dd43c604b8f1677b5aa"
+  integrity sha512-Yl+7nfreYKaLRvAvjNPkvfjnQHJM1yLBY3zhqAwcJSwR/6ETkanUgylgtIvkvz0xJ+p/vZuNw8X7Hnb7Whsbpw==
+  dependencies:
+    follow-redirects "1.5.10"
+
+axios@^0.19.0:
   version "0.19.0"
   resolved "https://registry.yarnpkg.com/axios/-/axios-0.19.0.tgz#8e09bff3d9122e133f7b8101c8fbdd00ed3d2ab8"
   integrity sha512-1uvKqKQta3KBxIz14F2v06AEHZ/dIoeKfbTRkK1E5oqjDnuEerLmYTgJB5AiQZHJcljpg1TuRzdjDR06qNk0DQ==
@@ -3170,12 +3177,7 @@ block-stream@*:
   dependencies:
     inherits "~2.0.0"
 
-bluebird@3.7.1:
-  version "3.7.1"
-  resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.7.1.tgz#df70e302b471d7473489acf26a93d63b53f874de"
-  integrity sha512-DdmyoGCleJnkbp3nkbxTLJ18rjDsE4yCggEwKNXkeV123sPNfOCYeDoeuOY+F2FrSjO1YXcTU+dsy96KMy+gcg==
-
-bluebird@^3.5.0, bluebird@^3.5.5, bluebird@^3.7.2:
+bluebird@3.7.2, bluebird@^3.5.0, bluebird@^3.5.5, bluebird@^3.7.2:
   version "3.7.2"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.7.2.tgz#9f229c15be272454ffa973ace0dbee79a1b0c36f"
   integrity sha512-XpNj6GDQzdfW+r2Wnn7xiSAd7TM3jzkxGXBGTtWKuSXv1xUV+azxAm8jdWZN06QTQk+2N2XB9jRDkvbmQmcRtg==
@@ -7201,13 +7203,13 @@ gatsby-source-filesystem@^2.1.48:
     valid-url "^1.0.9"
     xstate "^4.7.2"
 
-gatsby-source-ghost@^4.0.3:
-  version "4.0.3"
-  resolved "https://registry.yarnpkg.com/gatsby-source-ghost/-/gatsby-source-ghost-4.0.3.tgz#ae0459e0663c20aa6308529a1eb09e7ee721a336"
-  integrity sha512-uAihrEHqNkbirL3sl6cYDMvqsZRM66V92WA4oqM87kq2txQUzvMYid8kw2YRdBhMw0AJYslL61PttuqLrqyTIQ==
+gatsby-source-ghost@^4.0.4:
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/gatsby-source-ghost/-/gatsby-source-ghost-4.0.4.tgz#eb50e4770f6ceb63981d340d32c11e072e88f119"
+  integrity sha512-ZOH6emJI9QteZTQzZwQf6tfUZQPox9MTnxHFIO4vf8CMgrBaW6Gavytooz9PZgVyesH/EFr43fuClVZbqLlJ6w==
   dependencies:
-    "@tryghost/content-api" "1.3.4"
-    bluebird "3.7.1"
+    "@tryghost/content-api" "1.3.7"
+    bluebird "3.7.2"
     cheerio "1.0.0-rc.3"
     gatsby-node-helpers "^0.3.0"
     qs "6.9.1"
