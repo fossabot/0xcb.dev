@@ -7561,10 +7561,10 @@ gatsby-page-utils@^0.1.2:
     lodash "^4.17.15"
     micromatch "^3.1.10"
 
-gatsby-plugin-advanced-sitemap@^1.5.3:
-  version "1.5.3"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-advanced-sitemap/-/gatsby-plugin-advanced-sitemap-1.5.3.tgz#2cc26b5caa00de19ced13f9dd02bfc344b74ffe8"
-  integrity sha512-oD+sCdzQhRVs/EaCRBVgMk1to4YFtIRvbq0d+bPIHoF+SEKT+E/sN15G+trSi8FS3rg90PkAuYlP2mIrA/wYsQ==
+gatsby-plugin-advanced-sitemap@^1.5.4:
+  version "1.5.4"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-advanced-sitemap/-/gatsby-plugin-advanced-sitemap-1.5.4.tgz#7ee3ca191c0c626da90986ad7a6e612883dabdac"
+  integrity sha512-xTReXWHEVQbFTGwFSRh4RJ/ZP4zlcevX2xTh8bNkODulF9EpEjVmbo+x9IV/hnRVSE0OA5oTHv+IPljUVF1Exg==
   dependencies:
     "@babel/runtime" "7.9.2"
     fs-extra "9.0.0"
