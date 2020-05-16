@@ -29,6 +29,12 @@ const Layout: FunctionComponent<LayoutProps> = ({
         <nav className={`footer__nav`}>
           <Link to={`/privacy-policy`}>Privacy Policy</Link>
         </nav>
+        <div
+          dangerouslySetInnerHTML={{
+            __html:
+              '<noscript><img src="https://stats.conor-burns.com/ingress/b8d4be52-076c-4066-a608-a0ecdc725502/pixel.gif"></noscript> <script src="https://stats.conor-burns.com/ingress/b8d4be52-076c-4066-a608-a0ecdc725502/script.js"></script>',
+          }}
+        />
         <div className={`footer__copyright`}>
           Conor Burns &copy; {new Date().getFullYear()}
         </div>
