@@ -1,8 +1,8 @@
-import React, {FunctionComponent} from 'react';
-import Navigation from './common/Navigation';
+import React, { FunctionComponent } from "react"
+import Navigation from "./common/Navigation"
 
 const DefaultHeader: FunctionComponent = () => (
-  <Navigation classes={['navigation__container--dark']}/>
-);
+  <Navigation classes={["navigation__container--dark"]} />
+)
 
-export default DefaultHeader;
+export default DefaultHeader

@@ -1,9 +1,10 @@
-@import 'variables';
-@import 'mixins';
+@import "variables";
+@import "mixins";
 
 body {
   background-color: $background-color;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
@@ -40,7 +41,7 @@ img {
   width: 1px !important;
   height: 1px !important;
   padding: 0 !important;
-  margin: -1px !important;;
+  margin: -1px !important;
   overflow: hidden !important;
   clip: rect(0, 0, 0, 0) !important;
   white-space: nowrap !important;
@@ -101,20 +102,20 @@ hr {
     padding: 15px;
     border-radius: 5px;
     text-align: center;
-    transition: all .5s;
-    font-size: .9em;
+    transition: all 0.5s;
+    font-size: 0.9em;
 
     @include smallerThan(sm) {
       margin-bottom: 10px;
     }
 
     svg {
-      opacity: .5;
+      opacity: 0.5;
       display: block;
       margin: 0 auto 10px;
       width: 30px;
       height: auto;
-      transition: all .5s;
+      transition: all 0.5s;
     }
 
     &:hover {
@@ -136,10 +137,10 @@ hr {
 
 .ReactModal {
   &__Overlay {
-    background-color: rgba(0, 0, 0, .5) !important;
-    z-index: map_get($z-indexes, 'search');
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    z-index: map_get($z-indexes, "search");
     opacity: 0;
-    transition: opacity .25s ease-in-out;
+    transition: opacity 0.25s ease-in-out;
 
     &--after-open {
       opacity: 1;

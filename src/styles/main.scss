@@ -1,23 +1,23 @@
-@import '~normalize.css';
+@import "~normalize.css";
 
-@import 'components/post-card';
-@import 'components/about-box';
-@import 'components/navigation';
-@import 'components/subheader';
-@import 'components/header';
-@import 'components/layout';
-@import 'components/reading-progress';
-@import 'components/search';
-@import 'components/social-icons';
-@import 'components/comments';
+@import "components/post-card";
+@import "components/about-box";
+@import "components/navigation";
+@import "components/subheader";
+@import "components/header";
+@import "components/layout";
+@import "components/reading-progress";
+@import "components/search";
+@import "components/social-icons";
+@import "components/comments";
 
-@import 'templates/post';
-@import 'templates/page';
+@import "templates/post";
+@import "templates/page";
 
-@import 'pages/archive';
-@import 'pages/tags';
-@import 'pages/home';
-@import 'pages/contact';
-@import 'pages/error';
+@import "pages/archive";
+@import "pages/tags";
+@import "pages/home";
+@import "pages/contact";
+@import "pages/error";
 
-@import './common';
+@import "./common";

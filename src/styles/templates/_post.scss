@@ -1,13 +1,13 @@
-@import '../variables';
-@import '../mixins';
+@import "../variables";
+@import "../mixins";
 
 .post {
   @extend .container;
 
   display: grid;
-  grid-template-columns: .25fr minmax(0, 1fr) .25fr;
+  grid-template-columns: 0.25fr minmax(0, 1fr) 0.25fr;
   grid-column-gap: 30px;
-  z-index: map_get($z-indexes, 'post');
+  z-index: map_get($z-indexes, "post");
   margin-top: -5px !important;
 
   @include smallerThan(md) {
@@ -69,7 +69,7 @@
       height: calc(100vh - 70px);
       z-index: 2000;
       opacity: 0;
-      transition: opacity .25s;
+      transition: opacity 0.25s;
     }
 
     &--show-mobile {
@@ -85,7 +85,7 @@
     right: 20px;
     bottom: 20px;
     border-radius: 100%;
-    box-shadow: 0 0 3px rgba(0, 0, 0, .03), 0 3px 46px rgba(0, 0, 0, .1);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.03), 0 3px 46px rgba(0, 0, 0, 0.1);
     border: 0;
     z-index: 5000;
     width: 50px;
@@ -103,7 +103,7 @@
     border-right: 1px #e5eff5 solid;
     border-left: 1px #e5eff5 solid;
     background-color: #fff;
-    box-shadow: 0 0 3px rgba(0, 0, 0, .03), 0 3px 46px rgba(0, 0, 0, .1);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.03), 0 3px 46px rgba(0, 0, 0, 0.1);
     z-index: 10;
   }
 
@@ -111,7 +111,7 @@
     background-color: darken(#fff, 2%);
     color: lighten(#000, 40%);
     //border-top: 1px #e5eff5 solid;
-    font-size: .8em;
+    font-size: 0.8em;
     padding: 40px 40px 40px;
 
     @include smallerThan(md) {
@@ -148,7 +148,10 @@
       padding: 20px;
     }
 
-    h3::before, h4::before, h5::before, h6::before {
+    h3::before,
+    h4::before,
+    h5::before,
+    h6::before {
       display: block;
       content: " ";
       height: 90px;
@@ -237,7 +240,7 @@
 
     figcaption {
       color: $gray-600;
-      font-size: .8em;
+      font-size: 0.8em;
       margin-top: 7px;
       text-align: center;
     }
@@ -252,10 +255,10 @@
       line-height: 2em;
 
       & > code {
-        background-color: #FAFAFA;
+        background-color: #fafafa;
         border-radius: 3px;
         padding: 2px 5px;
-        font-size: .9em;
+        font-size: 0.9em;
       }
     }
 
@@ -279,7 +282,7 @@
         color: #fff;
         background-color: #272822;
         padding: 1em;
-        margin: .5em 0;
+        margin: 0.5em 0;
         overflow: auto;
         border-radius: 0.3em;
       }
@@ -292,7 +295,10 @@
       line-height: 1.2;
     }
 
-    h1, h2, h3, h4 {
+    h1,
+    h2,
+    h3,
+    h4 {
       &:focus {
         outline: none;
       }
@@ -337,8 +343,8 @@
 
   &__header-meta {
     display: flex;
-    font-size: .9em;
-    opacity: .8;
+    font-size: 0.9em;
+    opacity: 0.8;
     justify-content: space-between;
   }
 
@@ -353,7 +359,7 @@
   background-color: $white;
   border-top: 1px $border-color solid;
   border-bottom: 1px $border-color solid;
-  z-index: map_get($z-indexes, 'post-addition');
+  z-index: map_get($z-indexes, "post-addition");
   position: relative;
 
   @include smallerThan(md) {

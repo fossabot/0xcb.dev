@@ -23,7 +23,7 @@ jobs:
       - name: Build and Compress
         run: yarn run deploy
         env:
-          GHOST_API_URL: "https://blog.conor-burns.com"
+          GHOST_API_URL: "https://blog.0xcb.dev"
           GHOST_CONTENT_API_KEY: ${{ secrets.ghost_content_api_key }}
           GATSBY_ENV: "prod"
 
@@ -32,8 +32,3 @@ jobs:
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           environment: 'production'
-
-      - name: Deploy
-        run: docker-compose run deploy
-        env:
-          DEPLOY_KEY: ${{ secrets.deploy_key }}

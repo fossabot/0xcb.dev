@@ -1,7 +1,7 @@
 module.exports = {
-  siteUrl: `https://blog.conor-burns.com`,
+  siteUrl: `https://0xcb.dev`,
 
-  siteTitleMeta: `blog.conor-burns.com`,
+  siteTitleMeta: `0xcb.dev`,
   siteDescriptionMeta: `Thoughts, stories and ideas.`,
 
   shareImageWidth: 1000,
@@ -9,4 +9,4 @@ module.exports = {
 
   shortTitle: `C.B.`,
   siteIcon: `favicon.png`,
-};
+}

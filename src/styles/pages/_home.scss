@@ -1,5 +1,5 @@
-@import '../variables';
-@import '../mixins';
+@import "../variables";
+@import "../mixins";
 
 .home-container {
   @extend .container;
@@ -12,7 +12,7 @@
   max-width: 100%;
 
   @include between(lg, xl) {
-    grid-template-columns: minmax(0, 1fr) .5fr;
+    grid-template-columns: minmax(0, 1fr) 0.5fr;
     grid-template-areas: "last_post sidebar" ". sidebar" ". sidebar" ". sidebar";
   }
 
@@ -73,9 +73,9 @@
 
     a {
       display: block;
-      font-size: .8em;
+      font-size: 0.8em;
       padding: 10px;
-      transition: background-color .5s;
+      transition: background-color 0.5s;
       border-radius: 5px;
       background-color: $gray-50;
 
@@ -125,7 +125,7 @@
 
     img {
       display: block;
-      transition: .5s all;
+      transition: 0.5s all;
     }
 
     &:hover {
@@ -136,13 +136,13 @@
   }
 
   &__additional {
-    font-size: .8em;
+    font-size: 0.8em;
     grid-column: 1 / -1;
   }
 
   &__more-link {
     grid-column: 1 / -1;
-    font-size: .8em;
+    font-size: 0.8em;
     padding: 10px;
     border-radius: 5px;
     margin: auto;

@@ -4,22 +4,20 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-const path = require('path');
+const path = require("path")
 
 exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions;
+  const { createPage } = actions
 
   /**
    * Posts
    */
   const createPosts = new Promise((resolve, reject) => {
-    const postTemplate = path.resolve(`./src/templates/post.tsx`);
+    const postTemplate = path.resolve(`./src/templates/post.tsx`)
     resolve(
       graphql(`
         {
-          allGhostPost(
-            sort: {order: ASC, fields: published_at}
-          ) {
+          allGhostPost(sort: { order: ASC, fields: published_at }) {
             edges {
               node {
                 slug
@@ -29,8 +27,8 @@ exports.createPages = ({ graphql, actions }) => {
               }
             }
           }
-        }`
-      ).then((result) => {
+        }
+      `).then((result) => {
         if (result.errors) {
           return reject(result.errors)
         }
@@ -39,12 +37,12 @@ exports.createPages = ({ graphql, actions }) => {
           return resolve()
         }
 
-        const items = result.data.allGhostPost.edges;
+        const items = result.data.allGhostPost.edges
 
         items.forEach(({ node }) => {
           // This part here defines, that our posts will use
           // a `/:slug/` permalink.
-          node.url = `/${node.slug}/`;
+          node.url = `/${node.slug}/`
 
           createPage({
             path: node.url,
@@ -53,27 +51,25 @@ exports.createPages = ({ graphql, actions }) => {
               // Data passed to context is available
               // in page queries as GraphQL variables.
               slug: node.slug,
-              primaryTagSlug: node.primary_tag.slug
-            }
+              primaryTagSlug: node.primary_tag.slug,
+            },
           })
-        });
+        })
 
-        return resolve();
+        return resolve()
       })
     )
-  });
+  })
 
   /**
    * Tags
    */
   const createTags = new Promise((resolve, reject) => {
-    const tagsTemplate = path.resolve(`./src/templates/tag.tsx`);
+    const tagsTemplate = path.resolve(`./src/templates/tag.tsx`)
     resolve(
       graphql(`
         {
-          allGhostTag(
-            sort: {order: ASC, fields: name}
-          ) {
+          allGhostTag(sort: { order: ASC, fields: name }) {
             edges {
               node {
                 slug
@@ -81,8 +77,8 @@ exports.createPages = ({ graphql, actions }) => {
               }
             }
           }
-        }`
-      ).then((result) => {
+        }
+      `).then((result) => {
         if (result.errors) {
           return reject(result.errors)
         }
@@ -91,12 +87,12 @@ exports.createPages = ({ graphql, actions }) => {
           return resolve()
         }
 
-        const items = result.data.allGhostTag.edges;
+        const items = result.data.allGhostTag.edges
 
         items.forEach(({ node }) => {
           // This part here defines, that our tag pages will use
           // a `/tag/:slug/` permalink.
-          node.url = `/tag/${node.slug}/`;
+          node.url = `/tag/${node.slug}/`
 
           createPage({
             path: node.url,
@@ -104,27 +100,25 @@ exports.createPages = ({ graphql, actions }) => {
             context: {
               // Data passed to context is available
               // in page queries as GraphQL variables.
-              slug: node.slug
-            }
-          });
-        });
+              slug: node.slug,
+            },
+          })
+        })
 
-        return resolve();
+        return resolve()
       })
     )
-  });
+  })
 
   /**
    * Pages
    */
   const createPages = new Promise((resolve, reject) => {
-    const pageTemplate = path.resolve(`./src/templates/page.tsx`);
+    const pageTemplate = path.resolve(`./src/templates/page.tsx`)
     resolve(
       graphql(`
         {
-          allGhostPage(
-            sort: {order: ASC, fields: published_at}
-          ) {
+          allGhostPage(sort: { order: ASC, fields: published_at }) {
             edges {
               node {
                 slug
@@ -132,8 +126,8 @@ exports.createPages = ({ graphql, actions }) => {
               }
             }
           }
-        }`
-      ).then((result) => {
+        }
+      `).then((result) => {
         if (result.errors) {
           return reject(result.errors)
         }
@@ -142,12 +136,12 @@ exports.createPages = ({ graphql, actions }) => {
           return resolve()
         }
 
-        const items = result.data.allGhostPage.edges;
+        const items = result.data.allGhostPage.edges
 
         items.forEach(({ node }) => {
           // This part here defines, that our posts will use
           // a `/:slug/` permalink.
-          node.url = `/${node.slug}/`;
+          node.url = `/${node.slug}/`
 
           createPage({
             path: node.url,
@@ -156,14 +150,14 @@ exports.createPages = ({ graphql, actions }) => {
               // Data passed to context is available
               // in page queries as GraphQL variables.
               slug: node.slug,
-            }
+            },
           })
-        });
+        })
 
-        return resolve();
+        return resolve()
       })
     )
-  });
+  })
 
-  return Promise.all([createPosts, createTags, createPages]);
-};
+  return Promise.all([createPosts, createTags, createPages])
+}

@@ -1,9 +1,5 @@
 {
-  "presets": [
-    [
-      "babel-preset-gatsby"
-    ]
-  ],
+  "presets": [["babel-preset-gatsby"]],
   "plugins": [
     [
       "prismjs",
@@ -16,9 +12,7 @@
           "json",
           "typescript"
         ],
-        "plugins": [
-          "line-numbers"
-        ],
+        "plugins": ["line-numbers"],
         "theme": "okaidia",
         "css": true
       }

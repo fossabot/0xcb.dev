@@ -1,5 +1,5 @@
-@import '../variables';
-@import '../mixins';
+@import "../variables";
+@import "../mixins";
 
 .navigation {
   display: flex;
@@ -8,7 +8,7 @@
   height: 70px;
   margin: auto;
   width: $container-width;
-  z-index: map_get($z-indexes, 'navigation');
+  z-index: map_get($z-indexes, "navigation");
   position: relative;
   box-sizing: border-box;
   max-width: 100%;
@@ -62,8 +62,8 @@
     cursor: pointer;
     outline: none;
     text-decoration: none;
-    opacity: .7;
-    transition: opacity .5s;
+    opacity: 0.7;
+    transition: opacity 0.5s;
     padding: 16px;
 
     @include smallerThan(sm) {
@@ -76,13 +76,13 @@
   }
 
   &__container {
-    z-index: map_get($z-indexes, 'navigation');
+    z-index: map_get($z-indexes, "navigation");
 
     &--dark {
       top: 0;
       position: sticky;
       background-color: $nav-dark-background-color;
-      box-shadow: 0 0 3px rgba(0,0,0,.03), 0 3px 46px rgba(0,0,0,.07);
+      box-shadow: 0 0 3px rgba(0, 0, 0, 0.03), 0 3px 46px rgba(0, 0, 0, 0.07);
     }
   }
 }

@@ -4,10 +4,12 @@
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
 
-exports.onRouteUpdate = ({location}) => {
+exports.onRouteUpdate = ({ location }) => {
   if (location.hash) {
     setTimeout(() => {
-      document.querySelector(`${location.hash}`).scrollIntoView({block: 'end'});
-    }, 0);
+      document
+        .querySelector(`${location.hash}`)
+        .scrollIntoView({ block: "end" })
+    }, 0)
   }
-};
+}

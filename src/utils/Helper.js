@@ -1,52 +1,61 @@
-const cheerio = require('cheerio');
+const cheerio = require("cheerio")
 
 const generateItem = (post) => {
-  const itemUrl     = post.url;
-  const html        = post.html;
-  const htmlContent = cheerio.load(html, {decodeEntities: false, xmlMode: true});
-  const item   = {
+  const itemUrl = post.url
+  const html = post.html
+  const htmlContent = cheerio.load(html, {
+    decodeEntities: false,
+    xmlMode: true,
+  })
+  const item = {
     title: post.title,
     description: post.excerpt,
     guid: post.id,
     url: itemUrl,
     date: post.published_at,
-    categories: post.tags.map(tag => tag.name),
+    categories: post.tags.map((tag) => tag.name),
     author: post.primary_author.name,
-    custom_elements: []
-  };
-  let imageUrl;
+    custom_elements: [],
+  }
+  let imageUrl
 
   if (post.feature_image) {
-    imageUrl = post.feature_image;
+    imageUrl = post.feature_image
 
     item.custom_elements.push({
-      'media:content': {
+      "media:content": {
         _attr: {
           url: imageUrl,
-          medium: `image`
-        }
-      }
-    });
+          medium: `image`,
+        },
+      },
+    })
 
-    htmlContent(`p`).first().before(`<img src="` + imageUrl + `" />`);
-    htmlContent(`img`).attr(`alt`, post.title);
+    htmlContent(`p`)
+      .first()
+      .before(`<img src="` + imageUrl + `" />`)
+    htmlContent(`img`).attr(`alt`, post.title)
   }
 
   item.custom_elements.push({
-    'content:encoded': {
+    "content:encoded": {
       _cdata: htmlContent.html(),
     },
-  });
+  })
 
-  return item;
-};
+  return item
+}
 
 const generateFeed = (siteConfig) => {
   return {
-    serialize: ({query: {allGhostPost}}) => allGhostPost.edges.map(edge => Object.assign({}, generateItem(edge.node))),
-    setup: ({query: {allGhostSettings}}) => {
-      const title = allGhostSettings.edges[0].node.title || `No title`;
-      const siteDescription = allGhostSettings.edges[0].node.description || `No Description`;
+    serialize: ({ query: { allGhostPost } }) =>
+      allGhostPost.edges.map((edge) =>
+        Object.assign({}, generateItem(edge.node))
+      ),
+    setup: ({ query: { allGhostSettings } }) => {
+      const title = allGhostSettings.edges[0].node.title || `No title`
+      const siteDescription =
+        allGhostSettings.edges[0].node.description || `No Description`
       const feed = {
         title,
         description: siteDescription,
@@ -58,7 +67,7 @@ const generateFeed = (siteConfig) => {
           content: `http://purl.org/rss/1.0/modules/content/`,
           media: `http://search.yahoo.com/mrss/`,
         },
-      };
+      }
       return {
         ...feed,
       }
@@ -102,6 +111,6 @@ const generateFeed = (siteConfig) => {
   `,
     output: `/rss.xml`,
   }
-};
+}
 
-module.exports = generateFeed;
+module.exports = generateFeed

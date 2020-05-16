@@ -1,15 +1,15 @@
-const generateFeed = require('./src/utils/Helper.js');
-const config = require('./src/utils/Helper.js');
+const generateFeed = require("./src/utils/Helper.js")
+const config = require("./src/utils/Helper.js")
 
 require("dotenv").config({
   path: `.env`,
-});
+})
 
 const lunrPlugin = (lunr) => (builder) => {
   // removing stemmer
-  builder.pipeline.remove(lunr.stemmer);
-  builder.searchPipeline.remove(lunr.stemmer);
-};
+  builder.pipeline.remove(lunr.stemmer)
+  builder.searchPipeline.remove(lunr.stemmer)
+}
 
 const plugins = [
   `gatsby-plugin-sass`,
@@ -19,8 +19,8 @@ const plugins = [
     resolve: `gatsby-source-filesystem`,
     options: {
       name: `images`,
-      path: `${__dirname}/src/images`
-    }
+      path: `${__dirname}/src/images`,
+    },
   },
   `gatsby-transformer-sharp`,
   `gatsby-plugin-sharp`,
@@ -33,45 +33,45 @@ const plugins = [
       background_color: `#42566a`,
       theme_color: `#42566a`,
       display: `standalone`,
-      icon: `src/images/logo.svg` // This path is relative to the root of the site.
-    }
+      icon: `src/images/logo.svg`, // This path is relative to the root of the site.
+    },
   },
   {
     resolve: `gatsby-source-ghost`,
     options: {
       apiUrl: process.env.GHOST_API_URL,
-      contentApiKey: process.env.GHOST_CONTENT_API_KEY
-    }
+      contentApiKey: process.env.GHOST_CONTENT_API_KEY,
+    },
   },
   {
     resolve: `gatsby-plugin-lunr`,
     options: {
       languages: [
         {
-          name: 'en',
-          plugins: [lunrPlugin]
-        }
+          name: "en",
+          plugins: [lunrPlugin],
+        },
       ],
       fields: [
-        { name: 'slug', store: true },
-        { name: 'title', store: true, attributes: { boost: 20 } },
-        { name: 'content', store: true },
-        { name: 'excerpt', store: true },
-        { name: 'tags', store: true }
+        { name: "slug", store: true },
+        { name: "title", store: true, attributes: { boost: 20 } },
+        { name: "content", store: true },
+        { name: "excerpt", store: true },
+        { name: "tags", store: true },
       ],
       resolvers: {
         GhostPost: {
-          slug: node => node.slug,
-          title: node => node.title,
-          content: node => node.plaintext,
-          excerpt: node => node.excerpt,
-          tags: node => node.tags
-        }
-      }
-    }
+          slug: (node) => node.slug,
+          title: (node) => node.title,
+          content: (node) => node.plaintext,
+          excerpt: (node) => node.excerpt,
+          tags: (node) => node.tags,
+        },
+      },
+    },
   },
   `gatsby-plugin-twitter`,
-  'gatsby-plugin-offline',
+  "gatsby-plugin-offline",
   {
     resolve: `gatsby-plugin-advanced-sitemap`,
     options: {
@@ -120,22 +120,17 @@ const plugins = [
           }`,
       mapping: {
         allGhostPost: {
-          sitemap: `posts`
+          sitemap: `posts`,
         },
         allGhostTag: {
-          sitemap: `tags`
+          sitemap: `tags`,
         },
         allGhostPage: {
-          sitemap: `pages`
-        }
+          sitemap: `pages`,
+        },
       },
-      exclude: [
-        `/dev-404-page`,
-        `/404`,
-        `/404.html`,
-        `/offline`
-      ]
-    }
+      exclude: [`/dev-404-page`, `/404`, `/404.html`, `/offline`],
+    },
   },
   {
     resolve: `gatsby-plugin-feed`,
@@ -152,12 +147,10 @@ const plugins = [
           }
         }
       `,
-      feeds: [
-        generateFeed(config),
-      ],
-    }
-  }
-];
+      feeds: [generateFeed(config)],
+    },
+  },
+]
 
 if (process.env.GA_TRACKING_ID) {
   plugins.push({
@@ -165,16 +158,16 @@ if (process.env.GA_TRACKING_ID) {
     options: {
       trackingId: process.env.GA_TRACKING_ID,
       anonymize: true,
-    }
-  });
+    },
+  })
 }
 
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://blog.conor-burns.com',
-    title: 'Burns',
-    description: 'Thoughts, stories and ideas.',
-    author: `@conorlburns`
+    siteUrl: "https://0xcb.dev",
+    title: "Burns",
+    description: "Thoughts, stories and ideas.",
+    author: `@conorlburns`,
   },
-  plugins
-};
+  plugins,
+}

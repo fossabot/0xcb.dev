@@ -1,4 +1,4 @@
-import {graphql} from 'gatsby';
+import { graphql } from "gatsby"
 
 export const ghostPostFields = graphql`
   fragment GhostPostFields on GhostPost {
@@ -78,7 +78,7 @@ export const ghostPostFields = graphql`
     codeinjection_head
     comment_id
   }
-`;
+`
 
 export const ghostTagFields = graphql`
   fragment GhostTagFields on GhostTag {
@@ -90,7 +90,7 @@ export const ghostTagFields = graphql`
     meta_title
     meta_description
   }
-`;
+`
 
 export const ghostPageFields = graphql`
   fragment GhostPageFields on GhostPage {
@@ -169,7 +169,7 @@ export const ghostPageFields = graphql`
     codeinjection_head
     comment_id
   }
-`;
+`
 
 export const ghostSettingsFields = graphql`
   fragment GhostSettingsFields on GhostSettings {
@@ -187,4 +187,4 @@ export const ghostSettingsFields = graphql`
       url
     }
   }
-`;
+`

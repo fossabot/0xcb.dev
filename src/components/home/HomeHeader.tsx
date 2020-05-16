@@ -1,6 +1,6 @@
-import React, {FunctionComponent} from 'react';
-import Logo from './Logo';
-import Navigation from '../common/Navigation';
+import React, { FunctionComponent } from "react"
+import Logo from "./Logo"
+import Navigation from "../common/Navigation"
 
 const Header: FunctionComponent = () => (
   <header className="header">
@@ -9,6 +9,6 @@ const Header: FunctionComponent = () => (
       <Logo />
     </div>
   </header>
-);
+)
 
-export default Header;
+export default Header

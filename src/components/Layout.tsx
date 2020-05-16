@@ -5,21 +5,25 @@
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
 
-import React, {FunctionComponent, ReactElement, ReactNode} from 'react';
-import {Link} from 'gatsby';
+import React, { FunctionComponent, ReactElement, ReactNode } from "react"
+import { Link } from "gatsby"
 
-import './../styles/main.scss';
+import "./../styles/main.scss"
 
 interface LayoutProps {
-  children: ReactNode;
-  header?: ReactElement;
-  classNames?: string[];
+  children: ReactNode
+  header?: ReactElement
+  classNames?: string[]
 }
 
-const Layout: FunctionComponent<LayoutProps> = ({children = [], header, classNames = []}) => (
+const Layout: FunctionComponent<LayoutProps> = ({
+  children = [],
+  header,
+  classNames = [],
+}) => (
   <>
     {header}
-    <main className={classNames.join(' ')}>{children}</main>
+    <main className={classNames.join(" ")}>{children}</main>
     <footer className={`footer`}>
       <div className={`footer__content`}>
         <nav className={`footer__nav`}>
@@ -31,6 +35,6 @@ const Layout: FunctionComponent<LayoutProps> = ({children = [], header, classNam
       </div>
     </footer>
   </>
-);
+)
 
-export default Layout;
+export default Layout

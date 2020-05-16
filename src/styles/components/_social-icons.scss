@@ -1,5 +1,5 @@
-@import '../variables';
-@import '../mixins';
+@import "../variables";
+@import "../mixins";
 
 .social-icons {
   display: flex;
@@ -17,10 +17,10 @@
     color: $black !important;
     cursor: pointer;
     display: inline-block;
-    opacity: .75;
+    opacity: 0.75;
     font-size: 25px;
     text-align: center;
-    transition: all .5s;
+    transition: all 0.5s;
     border-bottom: 0 !important;
 
     &--github:hover {
@@ -36,7 +36,7 @@
     }
 
     &--linkedin:hover {
-      color: #04669A !important;
+      color: #04669a !important;
     }
 
     &--contact {

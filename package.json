@@ -1,12 +1,12 @@
 {
   "name": "gatsby-starter-default",
   "private": true,
-  "description": "Theme of blog.conor-burns.com",
+  "description": "Theme of 0xcb.dev",
   "version": "1.0.0",
   "author": {
     "name": "Conor Burns",
     "email": "mail@conor-burns.com",
-    "url": "https://conor-burns.com"
+    "url": "https://0xcb.dev"
   },
   "dependencies": {
     "@andrew-codes/gatsby-plugin-elasticlunr-search": "^1.0.4",
@@ -70,19 +70,17 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write src/**/*.{js,jsx}",
-    "start": "npm run develop",
+    "format": "prettier --write src/**/*.{js,ts,tsx}",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
     "type-check": "tsc",
     "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
     "deploy": "gatsby build && bread-compressor public"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Conor-Burns/blog.conor-burns.com"
+    "url": "https://github.com/Conor-Burns/0xcb.dev"
   },
   "bugs": {
-    "url": "https://github.com/Conor-Burns/blog.conor-burns.com/issues"
+    "url": "https://github.com/Conor-Burns/0xcb.dev/issues"
   }
 }

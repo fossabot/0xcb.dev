@@ -1,5 +1,5 @@
-@import '../variables';
-@import '../mixins';
+@import "../variables";
+@import "../mixins";
 
 .tags {
   @extend .container;
@@ -22,7 +22,7 @@
 
     margin-top: 0 !important;
     padding: 15px;
-    font-size: .8em;
+    font-size: 0.8em;
     text-align: center;
   }
 

@@ -1,4 +1,4 @@
-@import '../variables';
+@import "../variables";
 
 .footer {
   max-width: 100%;
@@ -10,7 +10,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 15px 0;
-    font-size: .8em;
+    font-size: 0.8em;
   }
 
   &__copyright {

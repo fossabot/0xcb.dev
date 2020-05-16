@@ -1,4 +1,4 @@
-@import '../variables';
+@import "../variables";
 
 .subheader {
   background-color: $primary-color;
@@ -19,9 +19,9 @@
 
     a {
       color: $white;
-      opacity: .5;
-      font-size: .8em;
-      transition: opacity .5s;
+      opacity: 0.5;
+      font-size: 0.8em;
+      transition: opacity 0.5s;
 
       &:hover {
         opacity: 1;
@@ -32,7 +32,7 @@
   &__tag-link {
     color: $white;
     text-decoration: none;
-    opacity: .85;
+    opacity: 0.85;
     font-weight: normal;
   }
 
@@ -42,7 +42,7 @@
     color: $white;
 
     small {
-      color: rgba($white, .8);
+      color: rgba($white, 0.8);
     }
   }
 
@@ -58,8 +58,8 @@
 
   @each $tag, $properties in $tag-colors {
     &--tag-#{$tag} {
-      color: map-get($properties, 'color');
-      background-color: map-get($properties, 'background-color');
+      color: map-get($properties, "color");
+      background-color: map-get($properties, "background-color");
     }
   }
 }

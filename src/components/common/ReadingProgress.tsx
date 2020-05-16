@@ -1,38 +1,49 @@
-import React, {FunctionComponent, RefObject, useEffect, useState} from 'react';
+import React, { FunctionComponent, RefObject, useEffect, useState } from "react"
 
 interface ReadingProgressProps {
-  tag: string;
-  target: RefObject<HTMLElement>;
+  tag: string
+  target: RefObject<HTMLElement>
 }
 
-const ReadingProgress: FunctionComponent<ReadingProgressProps> = ({tag, target}) => {
-  const [readingProgress, setReadingProgress] = useState(0);
+const ReadingProgress: FunctionComponent<ReadingProgressProps> = ({
+  tag,
+  target,
+}) => {
+  const [readingProgress, setReadingProgress] = useState(0)
 
   useEffect(() => {
-    window.addEventListener('scroll', () => {
+    window.addEventListener("scroll", () => {
       if (!target.current) {
-        return;
+        return
       }
 
-      const element         = target.current;
-      const totalHeight     = element.clientHeight - element.offsetTop - (window.innerHeight / 1.5);
-      const windowScrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+      const element = target.current
+      const totalHeight =
+        element.clientHeight - element.offsetTop - window.innerHeight / 1.5
+      const windowScrollTop =
+        window.pageYOffset ||
+        document.documentElement.scrollTop ||
+        document.body.scrollTop ||
+        0
 
       if (windowScrollTop === 0) {
-        return setReadingProgress(0);
+        return setReadingProgress(0)
       }
 
       if (windowScrollTop > totalHeight) {
-        return setReadingProgress(100);
+        return setReadingProgress(100)
       }
 
-      setReadingProgress((windowScrollTop / totalHeight) * 100);
-    });
-  });
+      setReadingProgress((windowScrollTop / totalHeight) * 100)
+    })
+  })
 
   return (
-    <div className={`reading-progress reading-progress--tag-${tag}`} style={{width: readingProgress + '%'}}/>
-  );
-};
+    <div
+      className={`reading-progress reading-progress--tag-${tag}`}
+      style={{ width: readingProgress + "%" }}
+    />
+  )
+}
 
-export default ReadingProgress;
+export default ReadingProgress

@@ -1,6 +1,11 @@
-$background-color: #FAFAFA;
+$background-color: #fafafa;
 $primary-color: #002b36;
-$background-gradient: linear-gradient(-45deg, lighten($primary-color, 10%), #002b36) repeat scroll 0 0 transparent;
+$background-gradient: linear-gradient(
+    -45deg,
+    lighten($primary-color, 10%),
+    #002b36
+  )
+  repeat scroll 0 0 transparent;
 $border-color: #e5eff5;
 $nav-dark-background-color: #20232a;
 $header-height: 440px;
@@ -14,13 +19,34 @@ $z-indexes: (
   search: 2000,
 );
 $tag-colors: (
-  android: (color: #000, background-color: #74C74C),
-  linux: (color: #000, background-color: #DDC96A),
-  arduino: (color: #000, background-color: #0A948B),
-  arch: (color: #000, background-color:  	#3183B4),
-  sbc: (color: #000, background-color:  	#611B2F),
-  web: (color: #000, background-color: #353535),
-  tech: (color: #000, background-color: #71788A)
+  android: (
+    color: #000,
+    background-color: #74c74c,
+  ),
+  linux: (
+    color: #000,
+    background-color: #ddc96a,
+  ),
+  arduino: (
+    color: #000,
+    background-color: #0a948b,
+  ),
+  arch: (
+    color: #000,
+    background-color: #3183b4,
+  ),
+  sbc: (
+    color: #000,
+    background-color: #611b2f,
+  ),
+  web: (
+    color: #000,
+    background-color: #353535,
+  ),
+  tech: (
+    color: #000,
+    background-color: #71788a,
+  ),
 );
 $white: #fff;
 $gray-50: darken($white, 5%);
